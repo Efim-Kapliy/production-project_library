@@ -1,0 +1,16 @@
+$text-color: rgb(63, 2, 63);
+
+.text {
+  font-size: 42px;
+  color: $text-color;
+}
+
+.button {
+  padding: 10px;
+  margin: 6px 12px;
+  font-size: 18px;
+  color: white;
+  background-color: purple;
+  border-radius: 5px;
+  border: 1px solid $text-color;
+}
