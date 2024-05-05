@@ -24,4 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # API keys
-.env
+/.env
+
+# Snippets
+/.vscode
