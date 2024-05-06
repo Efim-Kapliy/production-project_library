@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   height: var(--navbar-height);
-  padding: 20px;
+  padding: 0 20px;
   background: var(--inverted-bg-color);
   display: flex;
   align-items: center;
@@ -11,7 +11,4 @@
   margin-left: auto;
   display: flex;
   column-gap: 15px;
-}
-
-.mainLink {
 }
