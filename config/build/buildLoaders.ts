@@ -18,6 +18,20 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     use: ['@svgr/webpack'],
   };
 
+  const babelLoader = {
+    test: /\.(tsx?|js)$/,
+    use: [
+      {
+        loader: 'babel-loader',
+        options: {
+          presets: [['@babel/preset-env', { targets: 'defaults' }]],
+          plugins: [isDev && 'react-refresh/babel'].filter(Boolean),
+        },
+      },
+    ],
+    exclude: /node_modules/,
+  };
+
   // Если не используем TypeScript, тогда нужен babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -42,5 +56,5 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  return [fileLoader, svgLoader, typescriptLoader, scssLoader];
+  return [fileLoader, svgLoader, babelLoader, typescriptLoader, scssLoader];
 }
