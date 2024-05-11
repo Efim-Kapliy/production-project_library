@@ -16,11 +16,11 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     isDev
       ? [new webpack.HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
       : [
-          new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: '[id].css',
-            ignoreOrder: false,
-          }),
-        ]
+        new MiniCssExtractPlugin({
+          filename: 'css/[name].[contenthash:8].css',
+          chunkFilename: '[id].css',
+          ignoreOrder: false,
+        }),
+      ],
   );
 }
