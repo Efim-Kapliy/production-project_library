@@ -1,5 +1,3 @@
-const { IgnorePlugin } = require('webpack');
-
 module.exports = {
   env: {
     browser: true,
