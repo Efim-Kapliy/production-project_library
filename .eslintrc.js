@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
@@ -31,7 +32,14 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'react/jsx-first-prop-new-line': [1, 'multiline'],
     'react/jsx-max-props-per-line': [1, { maximum: 1 }],
-    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['fallback', 'to'] }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['fallback', 'to'],
+      },
+    ],
+    'max-len': ['error', { code: 120, ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
