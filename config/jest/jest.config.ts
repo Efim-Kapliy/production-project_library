@@ -6,6 +6,8 @@
 
  */
 
+import path from 'path';
+
 export default {
   // All imported modules in your tests should be mocked automatically
 
@@ -38,6 +40,21 @@ export default {
     // '**/__tests__/**/*.[jt]s?(x)',
     // '**/?(*.)+(spec|test).[tj]s?(x)',
   ],
+
+  modulePaths: [
+    '<rootDir>src',
+  ],
+
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+
+  setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.ts'],
+
+  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
+
+  moduleNameMapper: {
+    '\\.(s?css)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 
   // Indicates whether the coverage information should be collected while executing the test
 
@@ -107,10 +124,6 @@ export default {
 
   // An array of file extensions your modules use
 
-  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-
-  // moduleNameMapper: {},
-
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
 
   // modulePathIgnorePatterns: [],
@@ -157,7 +170,7 @@ export default {
 
   // roots: [
 
-  //   "<rootDir>"
+  //   '<rootDir>',
 
   // ],
 
@@ -168,10 +181,6 @@ export default {
   // The paths to modules that run some code to configure or set up the testing environment before each test
 
   // setupFiles: [],
-
-  // A list of paths to modules that run some code to configure or set up the testing framework before each test
-
-  // setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
 
