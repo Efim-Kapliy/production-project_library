@@ -36,7 +36,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['fallback', 'to'],
+        ignoreAttribute: ['fallback', 'to', 'data-testid'],
       },
     ],
     'max-len': ['error', { code: 120, ignoreComments: true }],
