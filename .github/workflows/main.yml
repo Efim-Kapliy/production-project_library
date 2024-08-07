@@ -2,22 +2,22 @@ name: Building, Testing, Linting
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master, develop]
+    branches: [ master, develop ]
 jobs:
   Initial-pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [ 17.x ]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Staring Node.js ${{matrix.node-version}}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{matrix.node-version}}
+          node-version: ${{ matrix.node-version }}
       - name: Install modules
         run: npm install
       - name: Build production project
