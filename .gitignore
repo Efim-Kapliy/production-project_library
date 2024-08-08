@@ -9,6 +9,7 @@
 # testing
 /coverage
 /.loki
+/storybook-static
 
 # production
 /build
