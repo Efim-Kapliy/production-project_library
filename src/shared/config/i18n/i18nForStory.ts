@@ -6,7 +6,7 @@ i18n
   .use(Backend) // lazy loads translations from /public/locales
   .use(LanguageDetector) // detect user language
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'ru',
     debug: true,
     interpolation: {
       escapeValue: false,
