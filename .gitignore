@@ -13,6 +13,7 @@
 
 # production
 /build
+/extractedTranslations
 
 # misc
 .DS_Store
