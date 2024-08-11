@@ -16,7 +16,7 @@
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static --verboseRenderer",
     "storybook": "start-storybook -p 6006 -c ./config/.storybook -s ./public",
-    "storybook:build": "build-storybook -c ./config/.storybook -s ./public"
+    "storybook:build": "build-storybook -c ./config/.storybook -s public"
   },
   "author": "",
   "license": "ISC",
