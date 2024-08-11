@@ -14,9 +14,9 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static --verboseRenderer",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/.storybook -s ./public",
-    "storybook:build": "build-storybook -c ./config/.storybook -s public"
+    "storybook:build": "build-storybook -c ./config/.storybook -s ./public"
   },
   "author": "",
   "license": "ISC",
@@ -90,9 +90,6 @@
     "react-router-dom": "^6.2.1"
   },
   "loki": {
-    "looks-same": {
-      "ignoreCaret": true
-    },
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
@@ -105,6 +102,11 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
-    }
+    },
+    "diffingEngine": "pixelmatch",
+    "pixelmatch": {
+      "threshold": 0.1
+    },
+    "verboseRenderer": true
   }
 }
