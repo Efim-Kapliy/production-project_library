@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 17.4.x ]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
