@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
-    'linebreak-style': ['error', 'unix'],
+    'linebreak-style': ['error', 'windows'],
     'import/no-extraneous-dependencies': 'warn',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
